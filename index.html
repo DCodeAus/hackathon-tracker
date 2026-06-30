@@ -13,9 +13,10 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #0f0f1e;
             min-height: 100vh;
             padding: 2rem 1rem;
+            color: #e0e0e0;
         }
 
         .container {
@@ -25,7 +26,7 @@
 
         header {
             text-align: center;
-            color: white;
+            color: #ff006e;
             margin-bottom: 2rem;
         }
 
@@ -33,11 +34,14 @@
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
             font-weight: 700;
+            color: #ff006e;
+            text-shadow: 0 0 10px rgba(255, 0, 110, 0.5);
         }
 
         header p {
             font-size: 1.1rem;
-            opacity: 0.95;
+            opacity: 0.85;
+            color: #00d9ff;
         }
 
         .controls {
@@ -59,23 +63,24 @@
         }
 
         .btn-primary {
-            background: white;
-            color: #667eea;
+            background: #ff006e;
+            color: #0f0f1e;
         }
 
         .btn-primary:hover {
             transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 20px rgba(255, 0, 110, 0.6);
         }
 
         .btn-secondary {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            border: 2px solid white;
+            background: rgba(0, 217, 255, 0.2);
+            color: #00d9ff;
+            border: 2px solid #00d9ff;
         }
 
         .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(0, 217, 255, 0.3);
+            box-shadow: 0 0 15px rgba(0, 217, 255, 0.4);
         }
 
         .modal {
@@ -85,7 +90,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(15, 15, 30, 0.9);
             z-index: 1000;
             align-items: center;
             justify-content: center;
@@ -96,21 +101,22 @@
         }
 
         .modal-content {
-            background: white;
+            background: #1a1a2e;
             padding: 2rem;
             border-radius: 12px;
             max-width: 500px;
             width: 90%;
             max-height: 90vh;
             overflow-y: auto;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 30px rgba(255, 0, 110, 0.3);
+            border: 1px solid #ff006e;
         }
 
         .modal-header {
             font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
-            color: #333;
+            color: #ff006e;
         }
 
         .form-group {
@@ -120,7 +126,7 @@
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
-            color: #333;
+            color: #00d9ff;
             font-weight: 500;
         }
 
@@ -129,7 +135,9 @@
         .form-group select {
             width: 100%;
             padding: 0.75rem;
-            border: 2px solid #e0e0e0;
+            border: 2px solid #39ff14;
+            background: #0f0f1e;
+            color: #e0e0e0;
             border-radius: 6px;
             font-family: inherit;
             font-size: 1rem;
@@ -140,7 +148,8 @@
         .form-group textarea:focus,
         .form-group select:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: #ff006e;
+            box-shadow: 0 0 10px rgba(255, 0, 110, 0.3);
         }
 
         .form-group textarea {
@@ -165,21 +174,23 @@
         }
 
         .btn-submit {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(135deg, #ff006e 0%, #ffa500 100%);
+            color: #0f0f1e;
         }
 
         .btn-submit:hover {
             opacity: 0.9;
+            box-shadow: 0 0 15px rgba(255, 0, 110, 0.5);
         }
 
         .btn-cancel {
-            background: #f0f0f0;
-            color: #333;
+            background: #39ff14;
+            color: #0f0f1e;
         }
 
         .btn-cancel:hover {
-            background: #e0e0e0;
+            background: #00d9ff;
+            color: #0f0f1e;
         }
 
         .section {
@@ -188,10 +199,10 @@
 
         .section-title {
             font-size: 1.8rem;
-            color: white;
+            color: #00d9ff;
             margin-bottom: 1.5rem;
             padding-bottom: 1rem;
-            border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+            border-bottom: 3px solid #ff006e;
         }
 
         .events-grid {
@@ -200,26 +211,28 @@
         }
 
         .event-card {
-            background: white;
+            background: #1a1a2e;
             border-radius: 12px;
             padding: 1.5rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 20px rgba(255, 0, 110, 0.2);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
+            border: 1px solid #39ff14;
         }
 
         .event-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 30px rgba(255, 0, 110, 0.4);
+            border-color: #ff006e;
         }
 
         .event-card.upcoming {
-            border-left: 5px solid #667eea;
+            border-left: 5px solid #ff006e;
         }
 
         .event-card.past {
-            border-left: 5px solid #999;
-            opacity: 0.85;
+            border-left: 5px solid #39ff14;
+            opacity: 0.7;
         }
 
         .event-actions {
@@ -231,8 +244,8 @@
         }
 
         .event-edit, .event-delete {
-            background: #667eea;
-            color: white;
+            background: #00d9ff;
+            color: #0f0f1e;
             border: none;
             border-radius: 50%;
             width: 32px;
@@ -246,17 +259,19 @@
         }
 
         .event-edit:hover {
-            background: #5568d3;
+            background: #39ff14;
             transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(57, 255, 20, 0.5);
         }
 
         .event-delete {
-            background: #ff6b6b;
+            background: #ff006e;
         }
 
         .event-delete:hover {
-            background: #ff5252;
+            background: #ffa500;
             transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(255, 0, 110, 0.5);
         }
 
         .event-header {
@@ -267,13 +282,13 @@
         .event-title {
             font-size: 1.4rem;
             font-weight: 600;
-            color: #333;
+            color: #00d9ff;
             margin-bottom: 0.5rem;
         }
 
         .event-date {
             font-size: 0.95rem;
-            color: #667eea;
+            color: #39ff14;
             font-weight: 500;
             display: flex;
             align-items: center;
@@ -285,12 +300,12 @@
         }
 
         .past .event-date {
-            color: #999;
+            color: #39ff14;
         }
 
         .event-location {
             font-size: 0.95rem;
-            color: #666;
+            color: #ff006e;
             display: flex;
             align-items: center;
             gap: 0.5rem;
@@ -302,7 +317,7 @@
         }
 
         .event-description {
-            color: #555;
+            color: #b0b0b0;
             font-size: 0.95rem;
             line-height: 1.5;
             margin: 1rem 0;
@@ -310,8 +325,8 @@
 
         .event-link {
             display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(135deg, #ff006e 0%, #ffa500 100%);
+            color: #0f0f1e;
             text-decoration: none;
             padding: 0.75rem 1.5rem;
             border-radius: 6px;
@@ -322,46 +337,53 @@
 
         .event-link:hover {
             opacity: 0.9;
+            box-shadow: 0 0 15px rgba(255, 0, 110, 0.5);
         }
 
         .empty-state {
-            background: white;
+            background: #1a1a2e;
             border-radius: 12px;
             padding: 2rem;
             text-align: center;
-            color: #999;
+            color: #666;
             font-size: 1.1rem;
+            border: 1px dashed #39ff14;
         }
 
         .tag {
             display: inline-block;
-            background: #f0f0f0;
-            color: #666;
+            background: rgba(0, 217, 255, 0.1);
+            color: #00d9ff;
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
             font-size: 0.85rem;
             margin-top: 0.5rem;
             margin-right: 0.5rem;
+            border: 1px solid #00d9ff;
         }
 
         .tag.ai {
-            background: #e3f2fd;
-            color: #1976d2;
+            background: rgba(255, 0, 110, 0.1);
+            color: #ff006e;
+            border-color: #ff006e;
         }
 
         .tag.startup {
-            background: #f3e5f5;
-            color: #7b1fa2;
+            background: rgba(57, 255, 20, 0.1);
+            color: #39ff14;
+            border-color: #39ff14;
         }
 
         .tag.building {
-            background: #fff3e0;
-            color: #f57c00;
+            background: rgba(255, 165, 0, 0.1);
+            color: #ffa500;
+            border-color: #ffa500;
         }
 
         .tag.competition {
-            background: #fce4ec;
-            color: #c2185b;
+            background: rgba(0, 217, 255, 0.1);
+            color: #00d9ff;
+            border-color: #00d9ff;
         }
 
         @media (max-width: 600px) {
@@ -530,33 +552,27 @@
     <script>
         // ===== EVENT DATA =====
         let events = [
-  {
-    "id": 1,
-    "title": "Melbourne | AI MLAI buildDay x S&C",
-    "date": "Saturday 18 July 9:00 AM - 1:00 PM AEST",
-    "location": "Stone & Chalk Melbourne Startup Hub, Melbourne VIC 3000",
-    "description": "Melbourne's AI buildDay. Bring an idea, a project you've been stuck on, or just turn up curious. You get OpenAI credits to power your tools. Build for a few hours, then demo what you created. Starts at 9am but come and go anytime that suits.",
-    "link": "https://luma.com/y5cbllth",
-    "status": "upcoming",
-    "tags": [
-      "AI",
-      "Building"
-    ]
-  },
-  {
-    "id": 2,
-    "title": "RUNWAY - Australia's First Startup Gameshow",
-    "date": "TBD (Check Luma page for date)",
-    "location": "Location revealed upon registration",
-    "description": "4 important lessons for founders/startups. Teams of 5 compete in quick-fire challenges: pitch an absurd startup to mock VCs, acquire users on the street, go on a scavenger hunt, and network undercover. Includes rooftop afterparty!",
-    "link": "https://luma.com/irlby-o3nj",
-    "status": "upcoming",
-    "tags": [
-      "Startup",
-      "Competition"
-    ]
-  }
-];
+            {
+                id: 1,
+                title: "Melbourne | AI MLAI buildDay x S&C",
+                date: "TBD (Check Luma page for date)",
+                location: "Stone & Chalk Melbourne Startup Hub, Melbourne VIC 3000",
+                description: "Melbourne's AI buildDay. Bring an idea, a project you've been stuck on, or just turn up curious. You get OpenAI credits to power your tools. Build for a few hours, then demo what you created. Starts at 9am but come and go anytime that suits.",
+                link: "https://luma.com/y5cbllth",
+                status: "upcoming",
+                tags: ["AI", "Building"]
+            },
+            {
+                id: 2,
+                title: "RUNWAY - Australia's First Startup Gameshow",
+                date: "TBD (Check Luma page for date)",
+                location: "Location revealed upon registration",
+                description: "4 important lessons for founders/startups. Teams of 5 compete in quick-fire challenges: pitch an absurd startup to mock VCs, acquire users on the street, go on a scavenger hunt, and network undercover. Includes rooftop afterparty!",
+                link: "https://luma.com/irlby-o3nj",
+                status: "upcoming",
+                tags: ["Startup", "Competition"]
+            }
+        ];
 
         // Load from localStorage if available
         function loadEvents() {
