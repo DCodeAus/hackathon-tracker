@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Days Hackathons</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #667eea;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-header {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .form-actions button {
+            flex: 1;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-submit:hover {
+            opacity: 0.9;
+        }
+
+        .btn-cancel {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .btn-cancel:hover {
+            background: #e0e0e0;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: white;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .events-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .event-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .event-card.upcoming {
+            border-left: 5px solid #667eea;
+        }
+
+        .event-card.past {
+            border-left: 5px solid #999;
+            opacity: 0.85;
+        }
+
+        .event-actions {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .event-edit, .event-delete {
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .event-edit:hover {
+            background: #5568d3;
+            transform: scale(1.1);
+        }
+
+        .event-delete {
+            background: #ff6b6b;
+        }
+
+        .event-delete:hover {
+            background: #ff5252;
+            transform: scale(1.1);
+        }
+
+        .event-header {
+            margin-bottom: 1rem;
+            padding-right: 3rem;
+        }
+
+        .event-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .event-date {
+            font-size: 0.95rem;
+            color: #667eea;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .event-date::before {
+            content: '📅';
+        }
+
+        .past .event-date {
+            color: #999;
+        }
+
+        .event-location {
+            font-size: 0.95rem;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .event-location::before {
+            content: '📍';
+        }
+
+        .event-description {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 1rem 0;
+        }
+
+        .event-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .event-link:hover {
+            opacity: 0.9;
+        }
+
+        .empty-state {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            color: #999;
+            font-size: 1.1rem;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #f0f0f0;
+            color: #666;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            margin-right: 0.5rem;
+        }
+
+        .tag.ai {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .tag.startup {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .tag.building {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+
+        .tag.competition {
+            background: #fce4ec;
+            color: #c2185b;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .section-title {
+                font-size: 1.4rem;
+            }
+
+            .event-title {
+                font-size: 1.2rem;
+            }
+
+            .controls {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Build Days Hackathons</h1>
+            <p>Discover upcoming and past hackathon events</p>
+        </header>
+
+        <div class="controls">
+            <button class="btn btn-primary" onclick="openAddEventModal()">+ Add Event</button>
+            <button class="btn btn-secondary" onclick="showDataModal()">💾 View Data</button>
+        </div>
+
+        <!-- UPCOMING EVENTS -->
+        <section class="section">
+            <h2 class="section-title">🔥 Upcoming Events</h2>
+            <div class="events-grid" id="upcomingEvents"></div>
+        </section>
+
+        <!-- PAST EVENTS -->
+        <section class="section">
+            <h2 class="section-title">✅ Past Events</h2>
+            <div class="events-grid" id="pastEvents"></div>
+        </section>
+    </div>
+
+    <!-- ADD EVENT MODAL -->
+    <div class="modal" id="addEventModal">
+        <div class="modal-content">
+            <div class="modal-header">Add New Event</div>
+            <form onsubmit="addEvent(event)">
+                <div class="form-group">
+                    <label for="title">Event Title *</label>
+                    <input type="text" id="title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date *</label>
+                    <input type="text" id="date" placeholder="e.g., 15 July 2024" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Location *</label>
+                    <input type="text" id="location" placeholder="e.g., Melbourne VIC" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" placeholder="Brief description of the event"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="link">Event Link</label>
+                    <input type="url" id="link" placeholder="https://...">
+                </div>
+
+                <div class="form-group">
+                    <label for="status">Status *</label>
+                    <select id="status">
+                        <option value="upcoming">Upcoming</option>
+                        <option value="past">Past</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="tags">Tags (comma-separated)</label>
+                    <input type="text" id="tags" placeholder="e.g., AI, Building, Startup">
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Add Event</button>
+                    <button type="button" class="btn-cancel" onclick="closeAddEventModal()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- EDIT EVENT MODAL -->
+    <div class="modal" id="editEventModal">
+        <div class="modal-content">
+            <div class="modal-header">Edit Event</div>
+            <form onsubmit="updateEvent(event)">
+                <div class="form-group">
+                    <label for="editTitle">Event Title *</label>
+                    <input type="text" id="editTitle" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="editDate">Date *</label>
+                    <input type="text" id="editDate" placeholder="e.g., 15 July 2024" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="editLocation">Location *</label>
+                    <input type="text" id="editLocation" placeholder="e.g., Melbourne VIC" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="editDescription">Description</label>
+                    <textarea id="editDescription" placeholder="Brief description of the event"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="editLink">Event Link</label>
+                    <input type="url" id="editLink" placeholder="https://...">
+                </div>
+
+                <div class="form-group">
+                    <label for="editStatus">Status *</label>
+                    <select id="editStatus">
+                        <option value="upcoming">Upcoming</option>
+                        <option value="past">Past</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="editTags">Tags (comma-separated)</label>
+                    <input type="text" id="editTags" placeholder="e.g., AI, Building, Startup">
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Save Changes</button>
+                    <button type="button" class="btn-cancel" onclick="closeEditEventModal()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- DATA VIEW MODAL -->
+    <div class="modal" id="dataModal">
+        <div class="modal-content">
+            <div class="modal-header">Event Data (JSON)</div>
+            <p style="color: #666; margin-bottom: 1rem;">Copy this to save your events. Paste it back to restore them.</p>
+            <textarea id="dataTextarea" style="width: 100%; height: 300px; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 6px; font-family: monospace; font-size: 0.9rem;" readonly></textarea>
+            <div class="form-actions">
+                <button class="btn-submit" onclick="copyData()" style="flex: 1; padding: 0.75rem;">📋 Copy to Clipboard</button>
+                <button class="btn-cancel" onclick="closeDataModal()" style="flex: 1; padding: 0.75rem;">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ===== EVENT DATA =====
+        let events = [
+            {
+                id: 1,
+                title: "Melbourne | AI MLAI buildDay x S&C",
+                date: "TBD (Check Luma page for date)",
+                location: "Stone & Chalk Melbourne Startup Hub, Melbourne VIC 3000",
+                description: "Melbourne's AI buildDay. Bring an idea, a project you've been stuck on, or just turn up curious. You get OpenAI credits to power your tools. Build for a few hours, then demo what you created. Starts at 9am but come and go anytime that suits.",
+                link: "https://luma.com/y5cbllth",
+                status: "upcoming",
+                tags: ["AI", "Building"]
+            },
+            {
+                id: 2,
+                title: "RUNWAY - Australia's First Startup Gameshow",
+                date: "TBD (Check Luma page for date)",
+                location: "Location revealed upon registration",
+                description: "4 important lessons for founders/startups. Teams of 5 compete in quick-fire challenges: pitch an absurd startup to mock VCs, acquire users on the street, go on a scavenger hunt, and network undercover. Includes rooftop afterparty!",
+                link: "https://luma.com/irlby-o3nj",
+                status: "upcoming",
+                tags: ["Startup", "Competition"]
+            }
+        ];
+
+        // Load from localStorage if available
+        function loadEvents() {
+            const saved = localStorage.getItem('hackathonEvents');
+            if (saved) {
+                events = JSON.parse(saved);
+            }
+        }
+
+        // Save to localStorage
+        function saveEvents() {
+            localStorage.setItem('hackathonEvents', JSON.stringify(events));
+            renderEvents();
+        }
+
+        // Render all events
+        function renderEvents() {
+            const upcomingContainer = document.getElementById('upcomingEvents');
+            const pastContainer = document.getElementById('pastEvents');
+
+            upcomingContainer.innerHTML = '';
+            pastContainer.innerHTML = '';
+
+            const upcoming = events.filter(e => e.status === 'upcoming');
+            const past = events.filter(e => e.status === 'past');
+
+            if (upcoming.length === 0) {
+                upcomingContainer.innerHTML = '<div class="empty-state">No upcoming events yet.</div>';
+            } else {
+                upcoming.forEach(event => {
+                    upcomingContainer.appendChild(createEventCard(event));
+                });
+            }
+
+            if (past.length === 0) {
+                pastContainer.innerHTML = '<div class="empty-state">No past events yet. Check back after events finish!</div>';
+            } else {
+                past.forEach(event => {
+                    pastContainer.appendChild(createEventCard(event));
+                });
+            }
+        }
+
+        // Create event card HTML
+        function createEventCard(event) {
+            const card = document.createElement('div');
+            card.className = `event-card ${event.status}`;
+            
+            const tagsHTML = event.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+            const linkHTML = event.link ? `<a href="${event.link}" class="event-link" target="_blank">View Event →</a>` : '';
+
+            card.innerHTML = `
+                <div class="event-actions">
+                    <button class="event-edit" onclick="openEditEventModal(${event.id})" title="Edit event">✏️</button>
+                    <button class="event-delete" onclick="deleteEvent(${event.id})" title="Delete event">×</button>
+                </div>
+                <div class="event-header">
+                    <h3 class="event-title">${event.title}</h3>
+                    <div class="event-date">${event.date}</div>
+                    <div class="event-location">${event.location}</div>
+                </div>
+                <p class="event-description">${event.description}</p>
+                <div>${tagsHTML}</div>
+                ${linkHTML}
+            `;
+
+            return card;
+        }
+
+        // Add event from form
+        function addEvent(e) {
+            e.preventDefault();
+
+            const newEvent = {
+                id: Date.now(),
+                title: document.getElementById('title').value,
+                date: document.getElementById('date').value,
+                location: document.getElementById('location').value,
+                description: document.getElementById('description').value,
+                link: document.getElementById('link').value,
+                status: document.getElementById('status').value,
+                tags: document.getElementById('tags').value.split(',').map(t => t.trim()).filter(t => t)
+            };
+
+            events.push(newEvent);
+            saveEvents();
+            closeAddEventModal();
+        }
+
+        // Delete event
+        function deleteEvent(id) {
+            if (confirm('Delete this event?')) {
+                events = events.filter(e => e.id !== id);
+                saveEvents();
+            }
+        }
+
+        // Modal functions
+        function openAddEventModal() {
+            document.getElementById('addEventModal').classList.add('active');
+        }
+
+        function closeAddEventModal() {
+            document.getElementById('addEventModal').classList.remove('active');
+            document.getElementById('title').value = '';
+            document.getElementById('date').value = '';
+            document.getElementById('location').value = '';
+            document.getElementById('description').value = '';
+            document.getElementById('link').value = '';
+            document.getElementById('tags').value = '';
+        }
+
+        function openEditEventModal(id) {
+            const event = events.find(e => e.id === id);
+            if (!event) return;
+
+            document.getElementById('editTitle').value = event.title;
+            document.getElementById('editDate').value = event.date;
+            document.getElementById('editLocation').value = event.location;
+            document.getElementById('editDescription').value = event.description;
+            document.getElementById('editLink').value = event.link;
+            document.getElementById('editStatus').value = event.status;
+            document.getElementById('editTags').value = event.tags.join(', ');
+            
+            document.getElementById('editEventModal').dataset.editId = id;
+            document.getElementById('editEventModal').classList.add('active');
+        }
+
+        function closeEditEventModal() {
+            document.getElementById('editEventModal').classList.remove('active');
+        }
+
+        function updateEvent(e) {
+            e.preventDefault();
+
+            const id = parseInt(document.getElementById('editEventModal').dataset.editId);
+            const eventIndex = events.findIndex(ev => ev.id === id);
+
+            if (eventIndex !== -1) {
+                events[eventIndex] = {
+                    id: id,
+                    title: document.getElementById('editTitle').value,
+                    date: document.getElementById('editDate').value,
+                    location: document.getElementById('editLocation').value,
+                    description: document.getElementById('editDescription').value,
+                    link: document.getElementById('editLink').value,
+                    status: document.getElementById('editStatus').value,
+                    tags: document.getElementById('editTags').value.split(',').map(t => t.trim()).filter(t => t)
+                };
+
+                saveEvents();
+                closeEditEventModal();
+            }
+        }
+
+        function showDataModal() {
+            document.getElementById('dataTextarea').value = JSON.stringify(events, null, 2);
+            document.getElementById('dataModal').classList.add('active');
+        }
+
+        function closeDataModal() {
+            document.getElementById('dataModal').classList.remove('active');
+        }
+
+        function copyData() {
+            const textarea = document.getElementById('dataTextarea');
+            textarea.select();
+            document.execCommand('copy');
+            alert('Copied to clipboard!');
+        }
+
+        // Close modals on background click
+        window.onclick = function(event) {
+            const addModal = document.getElementById('addEventModal');
+            const editModal = document.getElementById('editEventModal');
+            const dataModal = document.getElementById('dataModal');
+            
+            if (event.target === addModal) closeAddEventModal();
+            if (event.target === editModal) closeEditEventModal();
+            if (event.target === dataModal) closeDataModal();
+        }
+
+        // Initialize
+        loadEvents();
+        renderEvents();
+    </script>
+</body>
+</html>
