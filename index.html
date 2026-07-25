@@ -553,7 +553,7 @@
         // ===== EVENT DATA =====
         let events = [];
 
-        // Load events from JSON file
+        // Load events from JSON file (source of truth)
         async function loadEventsFromJSON() {
             try {
                 const response = await fetch('/hackathon-tracker/events.json');
@@ -566,26 +566,37 @@
             }
         }
 
-        // Load from localStorage only for manual backups (not on page load)
-        function restoreFromLocalStorage() {
-            const saved = localStorage.getItem('hackathonEvents');
-            if (saved && saved !== '[]') {
-                try {
-                    events = JSON.parse(saved);
-                    renderEvents();
-                } catch (error) {
-                    console.error('Error parsing localStorage:', error);
-                }
-            }
-        }
-
         // Save to localStorage
         function saveEvents() {
             localStorage.setItem('hackathonEvents', JSON.stringify(events));
             renderEvents();
         }
 
-        // Render all events
+        // Helper function to parse common date formats to ISO string (YYYY-MM-DD)
+        function parseDateToISO(dateStr) {
+            if (!dateStr) return null;
+            
+            // Format: "Saturday 18 July 9:00AM - 1:00 PM AEST" → extract "18 July"
+            const dayMatch = dateStr.match(/(\d{1,2})\s+(\w+)/);
+            if (dayMatch) {
+                const day = dayMatch[1];
+                const monthStr = dayMatch[2];
+                const months = {
+                    'January': 1, 'February': 2, 'March': 3, 'April': 4, 'May': 5, 'June': 6,
+                    'July': 7, 'August': 8, 'September': 9, 'October': 10, 'November': 11, 'December': 12
+                };
+                const month = months[monthStr] || 1;
+                return `2026-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+            }
+            
+            // If already in YYYY-MM-DD format
+            if (/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) {
+                return dateStr;
+            }
+            
+            return null;
+        }
+
         // Render all events (sorted chronologically)
         function renderEvents() {
             const upcomingContainer = document.getElementById('upcomingEvents');
@@ -598,8 +609,16 @@
             const past = events.filter(e => e.status === 'past');
 
             // Sort chronologically (earliest first for upcoming, latest first for past)
-            upcoming.sort((a, b) => new Date(a.sortDate) - new Date(b.sortDate));
-            past.sort((a, b) => new Date(b.sortDate) - new Date(a.sortDate));
+            upcoming.sort((a, b) => {
+                const dateA = a.sortDate ? new Date(a.sortDate) : new Date(0);
+                const dateB = b.sortDate ? new Date(b.sortDate) : new Date(0);
+                return dateA - dateB;
+            });
+            past.sort((a, b) => {
+                const dateA = a.sortDate ? new Date(a.sortDate) : new Date(0);
+                const dateB = b.sortDate ? new Date(b.sortDate) : new Date(0);
+                return dateB - dateA;
+            });
 
             if (upcoming.length === 0) {
                 upcomingContainer.innerHTML = '<div class="empty-state">No upcoming events yet.</div>';
@@ -616,7 +635,9 @@
                     pastContainer.appendChild(createEventCard(event));
                 });
             }
-        }        // Create event card HTML
+        }
+
+        // Create event card HTML
         function createEventCard(event) {
             const card = document.createElement('div');
             card.className = `event-card ${event.status}`;
@@ -646,10 +667,14 @@
         function addEvent(e) {
             e.preventDefault();
 
+            const dateInput = document.getElementById('date').value;
+            const sortDate = parseDateToISO(dateInput) || new Date().toISOString().split('T')[0];
+
             const newEvent = {
                 id: Date.now(),
                 title: document.getElementById('title').value,
-                date: document.getElementById('date').value,
+                date: dateInput,
+                sortDate: sortDate,
                 location: document.getElementById('location').value,
                 description: document.getElementById('description').value,
                 link: document.getElementById('link').value,
@@ -710,12 +735,15 @@
 
             const id = parseInt(document.getElementById('editEventModal').dataset.editId);
             const eventIndex = events.findIndex(ev => ev.id === id);
+            const dateInput = document.getElementById('editDate').value;
+            const sortDate = parseDateToISO(dateInput) || new Date().toISOString().split('T')[0];
 
             if (eventIndex !== -1) {
                 events[eventIndex] = {
                     id: id,
                     title: document.getElementById('editTitle').value,
-                    date: document.getElementById('editDate').value,
+                    date: dateInput,
+                    sortDate: sortDate,
                     location: document.getElementById('editLocation').value,
                     description: document.getElementById('editDescription').value,
                     link: document.getElementById('editLink').value,
@@ -756,7 +784,6 @@
         }
 
         // Initialize: Load from JSON (source of truth)
-        // localStorage changes are saved when user edits/adds events
         loadEventsFromJSON();
     </script>
 </body>
