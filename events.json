@@ -5,7 +5,7 @@
     "date": "Saturday 18 July 9:00AM - 1:00 PM AEST",
     "sortDate": "2026-07-18",
     "location": "Stone & Chalk Melbourne Startup Hub, Melbourne VIC 3000",
-    "description": "Melbourne's AI buildDay. Bring an idea, a project you've been stuck on, or just turn up curious. You get OpenAI credits to power your tools. Build for a few hours, then demo what you created. Starts at 9am but come and go anytime that suits.",
+    "description": "Melbourne's AI buildDay. Bring an idea, a project you've been stuck on, or just turn up curious. You get OpenAI credits to power your tools. Build for a few hours, then demo what you created.",
     "link": "https://luma.com/y5cbllth",
     "status": "upcoming",
     "tags": ["AI", "Building"]
@@ -16,7 +16,7 @@
     "date": "Wednesday 23 September 3:00 PM - 10:00 PM AEST",
     "sortDate": "2026-09-23",
     "location": "Location revealed upon registration",
-    "description": "4 important lessons for founders/startups. Teams of 5 compete in quick-fire challenges: pitch an absurd startup to mock VCs, acquire users on the street, go on a scavenger hunt, and network undercover. Includes rooftop afterparty!",
+    "description": "4 important lessons for founders/startups. Teams of 5 compete in quick-fire challenges: pitch an absurd startup to mock VCs, acquire users on the street, go on a scavenger hunt, and network undercover.",
     "link": "https://luma.com/irlby-o3nj",
     "status": "upcoming",
     "tags": ["Startup", "Competition"]
@@ -27,7 +27,7 @@
     "date": "Saturday 4 July 10:00 AM - 4:00 PM",
     "sortDate": "2026-07-04",
     "location": "Sydney, Australia",
-    "description": "Build a working product in 6 hours without getting stuck. Non-technical founders ship working web apps with live engineering support. Walk away with a deployed web app, live link, and complete user flow ready to demo.",
+    "description": "Build a working product in 6 hours without getting stuck. Non-technical founders ship working web apps with live engineering support.",
     "link": "https://luma.com/173s5lb4",
     "status": "upcoming",
     "tags": ["AI", "Building", "Product"]
@@ -38,18 +38,18 @@
     "date": "July 10-13, 2026",
     "sortDate": "2026-07-10",
     "location": "Melbourne, VIC",
-    "description": "A 4-day invite-only residency bringing together Australia's top founders, creatives, technologists & investors. Co-living experience across 6 themed houses with 100+ builders. Converging industries, connecting dots, and creating sparks.",
+    "description": "A 4-day invite-only residency bringing together Australia's top founders, creatives, technologists and investors. Co-living experience with 100+ builders.",
     "link": "https://apply.genesisprogram.com.au/?utm_source=luma&referrer=luma#faq",
     "status": "upcoming",
     "tags": ["Residency", "Founders", "Networking"]
   },
   {
     "id": 5,
-    "title": "Super Secret Startup Shit ⚡️ Sydney",
+    "title": "Super Secret Startup Shit Sydney",
     "date": "Wednesday 2 September 6:00 PM - 8:30 PM AEST",
     "sortDate": "2026-09-02",
     "location": "Abbotsford, Australia",
-    "description": "Raw, unfiltered truth about scaling, raising, bootstrapping and building something big. Where hidden magic happens. For bold and brilliant founders. No egos, no tall poppy syndrome. We rise together or we don't rise at all.",
+    "description": "Raw, unfiltered truth about scaling, raising, bootstrapping and building something big. Where hidden magic happens.",
     "link": "https://luma.com/ph7kdsfa",
     "status": "upcoming",
     "tags": ["Startup", "Networking", "Community"]
@@ -68,13 +68,13 @@
   {
     "id": 7,
     "title": "GovHack 2026",
-    "date": "29-31 August 2026 (estimated)",
+    "date": "29-31 August 2026",
     "sortDate": "2026-08-29",
     "location": "Distributed across Australia",
     "description": "46-hour hackathon using open government data. Distributed format with in-person sites across Australia. Free event for builders and innovators.",
     "link": "https://govhack.org/",
     "status": "upcoming",
-    "tags": ["Hackathon", "Government", "Data", "Open-Source"]
+    "tags": ["Hackathon", "Government", "Data"]
   },
   {
     "id": 8,
@@ -82,9 +82,9 @@
     "date": "6-12 December 2026",
     "sortDate": "2026-12-06",
     "location": "Sydney, Australia",
-    "description": "Major AI and machine learning conference happening in Sydney! NeurIPS is one of the largest AI research conferences in the world. Competitions typically launch May-October.",
+    "description": "Major AI and machine learning conference happening in Sydney. One of the largest AI research conferences in the world.",
     "link": "https://neurips.cc/Conferences/2026",
     "status": "upcoming",
-    "tags": ["AI", "ML", "Conference", "Research"]
+    "tags": ["AI", "ML", "Conference"]
   }
 ]
