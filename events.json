@@ -71,4 +71,20 @@
     "date": "29-31 August 2026 (estimated)",
     "sortDate": "2026-08-29",
     "location": "Distributed across Australia",
-    "description": "46-hour hackathon using open government data. Distributed format with in-person sites across Australia. Free event for
+    "description": "46-hour hackathon using open government data. Distributed format with in-person sites across Australia. Free event for builders and innovators.",
+    "link": "https://govhack.org/",
+    "status": "upcoming",
+    "tags": ["Hackathon", "Government", "Data", "Open-Source"]
+  },
+  {
+    "id": 8,
+    "title": "NeurIPS 2026",
+    "date": "6-12 December 2026",
+    "sortDate": "2026-12-06",
+    "location": "Sydney, Australia",
+    "description": "Major AI and machine learning conference happening in Sydney! NeurIPS is one of the largest AI research conferences in the world. Competitions typically launch May-October.",
+    "link": "https://neurips.cc/Conferences/2026",
+    "status": "upcoming",
+    "tags": ["AI", "ML", "Conference", "Research"]
+  }
+]
