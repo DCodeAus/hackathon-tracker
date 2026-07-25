@@ -556,7 +556,7 @@
         // Load events from JSON file
         async function loadEventsFromJSON() {
             try {
-                const response = await fetch('events.json');
+                const response = await fetch('./events.json');
                 if (!response.ok) throw new Error('Failed to load events.json');
                 events = await response.json();
                 renderEvents();
