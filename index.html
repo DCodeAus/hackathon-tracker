@@ -566,11 +566,16 @@
             }
         }
 
-        // Load from localStorage if available (overrides JSON)
-        function loadEvents() {
+        // Load from localStorage only for manual backups (not on page load)
+        function restoreFromLocalStorage() {
             const saved = localStorage.getItem('hackathonEvents');
-            if (saved) {
-                events = JSON.parse(saved);
+            if (saved && saved !== '[]') {
+                try {
+                    events = JSON.parse(saved);
+                    renderEvents();
+                } catch (error) {
+                    console.error('Error parsing localStorage:', error);
+                }
             }
         }
 
@@ -747,11 +752,9 @@
             if (event.target === dataModal) closeDataModal();
         }
 
-        // Initialize
-        loadEventsFromJSON().then(() => {
-            loadEvents();
-            renderEvents();
-        });
+        // Initialize: Load from JSON (source of truth)
+        // localStorage changes are saved when user edits/adds events
+        loadEventsFromJSON();
     </script>
 </body>
 </html>
