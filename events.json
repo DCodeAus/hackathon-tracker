@@ -29,7 +29,7 @@
     "location": "Sydney, Australia",
     "description": "Build a working product in 6 hours without getting stuck. Non-technical founders ship working web apps with live engineering support.",
     "link": "https://luma.com/173s5lb4",
-    "status": "upcoming",
+    "status": "past",
     "tags": ["AI", "Building", "Product"]
   },
   {
@@ -40,7 +40,7 @@
     "location": "Melbourne, VIC",
     "description": "A 4-day invite-only residency bringing together Australia's top founders, creatives, technologists and investors. Co-living experience with 100+ builders.",
     "link": "https://apply.genesisprogram.com.au/?utm_source=luma&referrer=luma#faq",
-    "status": "upcoming",
+    "status": "past",
     "tags": ["Residency", "Founders", "Networking"]
   },
   {
@@ -86,5 +86,38 @@
     "link": "https://neurips.cc/Conferences/2026",
     "status": "upcoming",
     "tags": ["AI", "ML", "Conference"]
+  },
+  {
+    "id": 9,
+    "title": "Melbourne | AI buildDay with MLAI x OpenAI x S&C",
+    "date": "Friday 14 August 9:00 AM - 1:00 PM AEST",
+    "sortDate": "2026-08-14",
+    "location": "Stone & Chalk Melbourne Startup Hub, Melbourne VIC 3000",
+    "description": "Melbourne's AI buildDay returns. Bring an idea, a project you've been stuck on, or just turn up curious. OpenAI credits and problem briefs provided. Build for a few hours, then demo what you created.",
+    "link": "https://luma.com/28e8n2r5",
+    "status": "upcoming",
+    "tags": ["AI", "Building"]
+  },
+  {
+    "id": 10,
+    "title": "AI Hype to Practice",
+    "date": "Tuesday 15 September 2026",
+    "sortDate": "2026-09-15",
+    "location": "Stone & Chalk Melbourne Startup Hub, Melbourne VIC 3000",
+    "description": "MLAI session moving past the AI hype cycle into practical, hands-on application for Melbourne's AI community.",
+    "link": "https://luma.com/mlai-nu4n",
+    "status": "upcoming",
+    "tags": ["AI", "Community", "Talk"]
+  },
+  {
+    "id": 11,
+    "title": "AI Engineer Hack Day (AI Week Sydney)",
+    "date": "Saturday 12 December 2026",
+    "sortDate": "2026-12-12",
+    "location": "Sydney, Australia (venue TBA)",
+    "description": "A full day of hands-on building as part of AI Week Sydney. Bring an idea or pick one up on the day, team up with other AI engineers, and ship something by the end.",
+    "link": "https://aiweek.com.au/",
+    "status": "upcoming",
+    "tags": ["AI", "Hackathon", "Building"]
   }
 ]
