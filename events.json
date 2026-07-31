@@ -7,7 +7,7 @@
     "location": "Stone & Chalk Melbourne Startup Hub, Melbourne VIC 3000",
     "description": "Melbourne's AI buildDay. Bring an idea, a project you've been stuck on, or just turn up curious. You get OpenAI credits to power your tools. Build for a few hours, then demo what you created.",
     "link": "https://luma.com/y5cbllth",
-    "status": "upcoming",
+    "status": "past",
     "tags": ["AI", "Building"]
   },
   {
@@ -119,5 +119,16 @@
     "link": "https://aiweek.com.au/",
     "status": "upcoming",
     "tags": ["AI", "Hackathon", "Building"]
+  },
+  {
+    "id": 12,
+    "title": "Eucalyptus x Build Club | Healthcare AI Hackathon",
+    "date": "Friday 4 - Saturday 5 December 2026, 5:30 PM AEDT onwards",
+    "sortDate": "2026-12-04",
+    "location": "Eucalyptus Offices, Level 3/155 Clarence St, Sydney NSW 2000",
+    "description": "A healthcare AI hackathon where technical builders and AI learners tackle challenges at the intersection of health and AI. Prize money, mentoring, and sponsor bounties from Eucalyptus, Bland AI, Nebius AI, Groq, Relevance AI and Sahha AI. Capped at 70 in-person participants, application required.",
+    "link": "https://luma.com/2qo9weog",
+    "status": "upcoming",
+    "tags": ["AI", "Health", "Hackathon"]
   }
 ]
