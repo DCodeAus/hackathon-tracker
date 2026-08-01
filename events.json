@@ -130,5 +130,93 @@
     "link": "https://luma.com/2qo9weog",
     "status": "upcoming",
     "tags": ["AI", "Health", "Hackathon"]
+  },
+  {
+    "id": 13,
+    "title": "Codex Community Meetup – Sydney",
+    "date": "Wednesday 19 August 5:30 PM - 7:30 PM AEST",
+    "sortDate": "2026-08-19",
+    "location": "Sydney, NSW (exact venue shared upon registration)",
+    "description": "The third Codex community meetup in Sydney. Community experts and OpenAI team members share the latest Codex updates, live demos, and best practices from power users, plus community demo slots and networking.",
+    "link": "https://luma.com/0otgrfug",
+    "status": "upcoming",
+    "tags": ["AI", "Codex", "Meetup"]
+  },
+  {
+    "id": 14,
+    "title": "Codex Community Meetup – Perth",
+    "date": "Thursday 13 August 2026 (time TBA)",
+    "sortDate": "2026-08-13",
+    "location": "Perth, WA (venue TBA)",
+    "description": "Evening Codex meetup with live demos of Codex features. Open to both experienced builders and those curious about coding agents. Limited spots. Details to be confirmed closer to the date.",
+    "link": "https://luma.com/30pe1ame",
+    "status": "upcoming",
+    "tags": ["AI", "Codex", "Meetup", "TBA"]
+  },
+  {
+    "id": 15,
+    "title": "Sydney | Claude Code Meetup – MongoDB",
+    "date": "Thursday 27 August 2026 (time TBA)",
+    "sortDate": "2026-08-27",
+    "location": "MongoDB Sydney (venue TBA)",
+    "description": "Claude Code community meetup hosted with MongoDB. Program and venue still to be announced by the organisers.",
+    "link": "https://claudecommunity.com.au/cities/sydney",
+    "status": "upcoming",
+    "tags": ["AI", "Claude Code", "Meetup", "TBA"]
+  },
+  {
+    "id": 16,
+    "title": "Sydney | Claude for Developers – AWS Sydney",
+    "date": "Thursday 10 September 2026 (time TBA)",
+    "sortDate": "2026-09-10",
+    "location": "AWS Sydney (venue TBA)",
+    "description": "Claude Code meetup for developers hosted at AWS Sydney. Full program to be confirmed.",
+    "link": "https://claudecommunity.com.au/cities/sydney",
+    "status": "upcoming",
+    "tags": ["AI", "Claude Code", "Meetup", "TBA"]
+  },
+  {
+    "id": 17,
+    "title": "Sydney | Claude Code Meetup – MongoDB",
+    "date": "Thursday 17 September 2026 (time TBA)",
+    "sortDate": "2026-09-17",
+    "location": "MongoDB Sydney (venue TBA)",
+    "description": "Claude Code community meetup hosted with MongoDB. Program and venue still to be announced by the organisers.",
+    "link": "https://claudecommunity.com.au/cities/sydney",
+    "status": "upcoming",
+    "tags": ["AI", "Claude Code", "Meetup", "TBA"]
+  },
+  {
+    "id": 18,
+    "title": "Sydney | Claude Code Meetup",
+    "date": "Tuesday 22 September 2026 (time TBA)",
+    "sortDate": "2026-09-22",
+    "location": "Sydney, NSW (venue TBA)",
+    "description": "Claude Code community meetup in Sydney. Program and location still to be released.",
+    "link": "https://claudecommunity.com.au/cities/sydney",
+    "status": "upcoming",
+    "tags": ["AI", "Claude Code", "Meetup", "TBA"]
+  },
+  {
+    "id": 19,
+    "title": "Sydney | Claude for Developers – AWS Sydney",
+    "date": "Thursday 8 October 2026 (time TBA)",
+    "sortDate": "2026-10-08",
+    "location": "AWS Sydney (venue TBA)",
+    "description": "Claude Code meetup for developers hosted at AWS Sydney. Full program to be confirmed.",
+    "link": "https://claudecommunity.com.au/cities/sydney",
+    "status": "upcoming",
+    "tags": ["AI", "Claude Code", "Meetup", "TBA"]
+  },
+  {
+    "id": 20,
+    "title": "Secret Tech Garden Party",
+    "date": "Early October 2026 (date TBA)",
+    "sortDate": "2026-10-01",
+    "location": "Private estate ~50 min from Melbourne (address revealed on acceptance)",
+    "description": "Application-only garden party for tech and startup people, hosted by Build Club. Disconnect from AI, connect over food, drinks and music. Apply by sharing one secret worth knowing.",
+    "link": "https://campus.buildclub.ai/events",
+    "status": "upcoming",
+    "tags": ["Networking", "Community", "TBA"]
   }
 ]
