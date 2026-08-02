@@ -235,6 +235,42 @@
             opacity: 0.7;
         }
 
+        .event-card.featured {
+            border: 2px solid #ffa500;
+            box-shadow: 0 0 25px rgba(255, 165, 0, 0.5);
+            animation: featured-pulse 2.5s ease-in-out infinite;
+        }
+
+        .event-card.featured:hover {
+            border-color: #ffa500;
+            box-shadow: 0 0 35px rgba(255, 165, 0, 0.7);
+        }
+
+        @keyframes featured-pulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 165, 0, 0.4); }
+            50% { box-shadow: 0 0 35px rgba(255, 165, 0, 0.8); }
+        }
+
+        .featured-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #ffa500 0%, #ff006e 100%);
+            color: #0f0f1e;
+            font-size: 1rem;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 0.4rem 1rem;
+            border-radius: 6px;
+            margin-bottom: 0.75rem;
+        }
+
+        .tag.byod {
+            background: rgba(255, 165, 0, 0.15);
+            color: #ffa500;
+            border-color: #ffa500;
+            font-weight: 600;
+        }
+
         .event-actions {
             position: absolute;
             top: 1rem;
@@ -640,23 +676,29 @@
         // Create event card HTML
         function createEventCard(event) {
             const card = document.createElement('div');
-            card.className = `event-card ${event.status}`;
-            
+            card.className = `event-card ${event.status}${event.featured ? ' featured' : ''}`;
+
             const tagsHTML = event.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+            const byodLabel = event.byod === 'required' ? '💻 BYOD – bring a laptop'
+                : event.byod === 'optional' ? '💻 BYOD optional'
+                : null;
+            const byodHTML = byodLabel ? `<span class="tag byod">${byodLabel}</span>` : '';
             const linkHTML = event.link ? `<a href="${event.link}" class="event-link" target="_blank">View Event →</a>` : '';
+            const featuredHTML = event.featured ? `<div class="featured-badge">⭐ Important – Official Event ⭐</div>` : '';
 
             card.innerHTML = `
                 <div class="event-actions">
                     <button class="event-edit" onclick="openEditEventModal(${event.id})" title="Edit event">✏️</button>
                     <button class="event-delete" onclick="deleteEvent(${event.id})" title="Delete event">×</button>
                 </div>
+                ${featuredHTML}
                 <div class="event-header">
                     <h3 class="event-title">${event.title}</h3>
                     <div class="event-date">${event.date}</div>
                     <div class="event-location">${event.location}</div>
                 </div>
                 <p class="event-description">${event.description}</p>
-                <div>${tagsHTML}</div>
+                <div>${tagsHTML}${byodHTML}</div>
                 ${linkHTML}
             `;
 

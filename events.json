@@ -8,7 +8,8 @@
     "description": "Melbourne's AI buildDay. Bring an idea, a project you've been stuck on, or just turn up curious. You get OpenAI credits to power your tools. Build for a few hours, then demo what you created.",
     "link": "https://luma.com/y5cbllth",
     "status": "past",
-    "tags": ["AI", "Building"]
+    "tags": ["AI", "Building"],
+    "byod": "required"
   },
   {
     "id": 2,
@@ -19,7 +20,8 @@
     "description": "4 important lessons for founders/startups. Teams of 5 compete in quick-fire challenges: pitch an absurd startup to mock VCs, acquire users on the street, go on a scavenger hunt, and network undercover.",
     "link": "https://luma.com/irlby-o3nj",
     "status": "upcoming",
-    "tags": ["Startup", "Competition"]
+    "tags": ["Startup", "Competition"],
+    "byod": "no"
   },
   {
     "id": 3,
@@ -30,7 +32,8 @@
     "description": "Build a working product in 6 hours without getting stuck. Non-technical founders ship working web apps with live engineering support.",
     "link": "https://luma.com/173s5lb4",
     "status": "past",
-    "tags": ["AI", "Building", "Product"]
+    "tags": ["AI", "Building", "Product"],
+    "byod": "required"
   },
   {
     "id": 4,
@@ -41,7 +44,8 @@
     "description": "A 4-day invite-only residency bringing together Australia's top founders, creatives, technologists and investors. Co-living experience with 100+ builders.",
     "link": "https://apply.genesisprogram.com.au/?utm_source=luma&referrer=luma#faq",
     "status": "past",
-    "tags": ["Residency", "Founders", "Networking"]
+    "tags": ["Residency", "Founders", "Networking"],
+    "byod": "optional"
   },
   {
     "id": 5,
@@ -52,7 +56,8 @@
     "description": "Raw, unfiltered truth about scaling, raising, bootstrapping and building something big. Where hidden magic happens.",
     "link": "https://luma.com/ph7kdsfa",
     "status": "upcoming",
-    "tags": ["Startup", "Networking", "Community"]
+    "tags": ["Startup", "Networking", "Community"],
+    "byod": "no"
   },
   {
     "id": 6,
@@ -63,7 +68,8 @@
     "description": "A classic coding camp adventure with the DDD Brisbane crew in the outback. Fullstack conference with community-selected presentations.",
     "link": "https://dddoutback.com/",
     "status": "upcoming",
-    "tags": ["Developer", "Conference", "Fullstack"]
+    "tags": ["Developer", "Conference", "Fullstack"],
+    "byod": "optional"
   },
   {
     "id": 7,
@@ -74,7 +80,8 @@
     "description": "46-hour hackathon using open government data. Distributed format with in-person sites across Australia. Free event for builders and innovators.",
     "link": "https://govhack.org/",
     "status": "upcoming",
-    "tags": ["Hackathon", "Government", "Data"]
+    "tags": ["Hackathon", "Government", "Data"],
+    "byod": "required"
   },
   {
     "id": 8,
@@ -85,7 +92,8 @@
     "description": "Major AI and machine learning conference happening in Sydney. One of the largest AI research conferences in the world.",
     "link": "https://neurips.cc/Conferences/2026",
     "status": "upcoming",
-    "tags": ["AI", "ML", "Conference"]
+    "tags": ["AI", "ML", "Conference"],
+    "byod": "optional"
   },
   {
     "id": 9,
@@ -96,7 +104,8 @@
     "description": "Melbourne's AI buildDay returns. Bring an idea, a project you've been stuck on, or just turn up curious. OpenAI credits and problem briefs provided. Build for a few hours, then demo what you created.",
     "link": "https://luma.com/28e8n2r5",
     "status": "upcoming",
-    "tags": ["AI", "Building"]
+    "tags": ["AI", "Building"],
+    "byod": "required"
   },
   {
     "id": 10,
@@ -107,7 +116,8 @@
     "description": "MLAI session moving past the AI hype cycle into practical, hands-on application for Melbourne's AI community.",
     "link": "https://luma.com/mlai-nu4n",
     "status": "upcoming",
-    "tags": ["AI", "Community", "Talk"]
+    "tags": ["AI", "Community", "Talk"],
+    "byod": "optional"
   },
   {
     "id": 11,
@@ -118,7 +128,8 @@
     "description": "A full day of hands-on building as part of AI Week Sydney. Bring an idea or pick one up on the day, team up with other AI engineers, and ship something by the end.",
     "link": "https://aiweek.com.au/",
     "status": "upcoming",
-    "tags": ["AI", "Hackathon", "Building"]
+    "tags": ["AI", "Hackathon", "Building"],
+    "byod": "required"
   },
   {
     "id": 12,
@@ -129,7 +140,8 @@
     "description": "A healthcare AI hackathon where technical builders and AI learners tackle challenges at the intersection of health and AI. Prize money, mentoring, and sponsor bounties from Eucalyptus, Bland AI, Nebius AI, Groq, Relevance AI and Sahha AI. Capped at 70 in-person participants, application required.",
     "link": "https://luma.com/2qo9weog",
     "status": "upcoming",
-    "tags": ["AI", "Health", "Hackathon"]
+    "tags": ["AI", "Health", "Hackathon"],
+    "byod": "required"
   },
   {
     "id": 13,
@@ -140,7 +152,8 @@
     "description": "The third Codex community meetup in Sydney. Community experts and OpenAI team members share the latest Codex updates, live demos, and best practices from power users, plus community demo slots and networking.",
     "link": "https://luma.com/0otgrfug",
     "status": "upcoming",
-    "tags": ["AI", "Codex", "Meetup"]
+    "tags": ["AI", "Codex", "Meetup"],
+    "byod": "optional"
   },
   {
     "id": 14,
@@ -151,7 +164,8 @@
     "description": "Evening Codex meetup with live demos of Codex features. Open to both experienced builders and those curious about coding agents. Limited spots. Details to be confirmed closer to the date.",
     "link": "https://luma.com/30pe1ame",
     "status": "upcoming",
-    "tags": ["AI", "Codex", "Meetup", "TBA"]
+    "tags": ["AI", "Codex", "Meetup", "TBA"],
+    "byod": "optional"
   },
   {
     "id": 15,
@@ -162,7 +176,8 @@
     "description": "Claude Code community meetup hosted with MongoDB. Program and venue still to be announced by the organisers.",
     "link": "https://claudecommunity.com.au/cities/sydney",
     "status": "upcoming",
-    "tags": ["AI", "Claude Code", "Meetup", "TBA"]
+    "tags": ["AI", "Claude Code", "Meetup", "TBA"],
+    "byod": "optional"
   },
   {
     "id": 16,
@@ -173,7 +188,8 @@
     "description": "Claude Code meetup for developers hosted at AWS Sydney. Full program to be confirmed.",
     "link": "https://claudecommunity.com.au/cities/sydney",
     "status": "upcoming",
-    "tags": ["AI", "Claude Code", "Meetup", "TBA"]
+    "tags": ["AI", "Claude Code", "Meetup", "TBA"],
+    "byod": "optional"
   },
   {
     "id": 17,
@@ -184,7 +200,8 @@
     "description": "Claude Code community meetup hosted with MongoDB. Program and venue still to be announced by the organisers.",
     "link": "https://claudecommunity.com.au/cities/sydney",
     "status": "upcoming",
-    "tags": ["AI", "Claude Code", "Meetup", "TBA"]
+    "tags": ["AI", "Claude Code", "Meetup", "TBA"],
+    "byod": "optional"
   },
   {
     "id": 18,
@@ -195,7 +212,8 @@
     "description": "Claude Code community meetup in Sydney. Program and location still to be released.",
     "link": "https://claudecommunity.com.au/cities/sydney",
     "status": "upcoming",
-    "tags": ["AI", "Claude Code", "Meetup", "TBA"]
+    "tags": ["AI", "Claude Code", "Meetup", "TBA"],
+    "byod": "optional"
   },
   {
     "id": 19,
@@ -206,7 +224,8 @@
     "description": "Claude Code meetup for developers hosted at AWS Sydney. Full program to be confirmed.",
     "link": "https://claudecommunity.com.au/cities/sydney",
     "status": "upcoming",
-    "tags": ["AI", "Claude Code", "Meetup", "TBA"]
+    "tags": ["AI", "Claude Code", "Meetup", "TBA"],
+    "byod": "optional"
   },
   {
     "id": 20,
@@ -217,6 +236,44 @@
     "description": "Application-only garden party for tech and startup people, hosted by Build Club. Disconnect from AI, connect over food, drinks and music. Apply by sharing one secret worth knowing.",
     "link": "https://campus.buildclub.ai/events",
     "status": "upcoming",
-    "tags": ["Networking", "Community", "TBA"]
+    "tags": ["Networking", "Community", "TBA"],
+    "byod": "no"
+  },
+  {
+    "id": 21,
+    "title": "Stripe Startups Build Day – Sydney",
+    "date": "Tuesday 18 August 2026 (time TBA)",
+    "sortDate": "2026-08-18",
+    "location": "Sydney, Australia (venue TBA)",
+    "description": "A day of hands-on building and coworking with the Stripe team. Get 1:1 technical integration support, connect with other founders, or just enjoy a change of scenery to build.",
+    "link": "https://stripe.events/sydneybuildday",
+    "status": "upcoming",
+    "tags": ["Startup", "Building", "Stripe"],
+    "byod": "required",
+    "featured": true
+  },
+  {
+    "id": 22,
+    "title": "DDD Brisbane 2026",
+    "date": "Saturday 5 December 2026",
+    "sortDate": "2026-12-05",
+    "location": "QUT Gardens Point, Brisbane QLD",
+    "description": "Non-profit, community-run developer conference. Full day of industry-leading presenters, with sessions proposed by the community and voted on by attendees, so the agenda is democratically decided.",
+    "link": "https://www.dddbrisbane.com/",
+    "status": "upcoming",
+    "tags": ["Developer", "Conference"],
+    "byod": "optional"
+  },
+  {
+    "id": 23,
+    "title": "Claude for Business: A Full-Day Hands-On Intensive",
+    "date": "Thursday 6 August 9:00 AM - 5:00 PM AEST",
+    "sortDate": "2026-08-06",
+    "location": "Melbourne Convention and Exhibition Centre (MCEC), Clarendon Room A, 1 Convention Centre Place, Melbourne VIC 3006",
+    "description": "Intensive training day for business leaders to become advanced Claude users, working through real tasks from their own businesses with Anthropic Academy-certified experts. Covers setup, personalisation, business tool integration, and advanced capabilities.",
+    "link": "https://www.eventbrite.com.au/e/claude-for-business-a-full-day-hands-on-intensive-melbourne-tickets-1993230198179",
+    "status": "upcoming",
+    "tags": ["AI", "Claude", "Business", "Training"],
+    "byod": "required"
   }
 ]
