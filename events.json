@@ -275,5 +275,16 @@
     "status": "upcoming",
     "tags": ["AI", "Claude", "Business", "Training"],
     "byod": "required"
+  },
+  {
+    "id": 24,
+    "title": "Codex Dev Challenge: Build for Good",
+    "date": "Submissions due Saturday 22 August, ~5:00 PM AEST",
+    "sortDate": "2026-08-22",
+    "location": "Online / remote (Codex community Discord)",
+    "description": "Build an application using Codex (plus the OpenAI API where it adds value) that helps people — accessibility, education, nonprofits, or positive community impact. Submit a public GitHub repo, demo link/video, and short description in the Codex Discord thread. Prizes: 1st $500, 2nd $250, 3rd $150 (or equivalent OpenAI API/Codex credits).",
+    "link": "",
+    "status": "upcoming",
+    "tags": ["AI", "Codex", "Hackathon", "Online"]
   }
 ]
