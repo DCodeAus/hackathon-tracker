@@ -286,5 +286,17 @@
     "link": "",
     "status": "upcoming",
     "tags": ["AI", "Codex", "Hackathon", "Online"]
+  },
+  {
+    "id": 25,
+    "title": "Notion Market Sydney",
+    "date": "Saturday 15 August 2026 (time TBA)",
+    "sortDate": "2026-08-15",
+    "location": "Cha & Zak's Clubhouse, Sydney (address on registration)",
+    "description": "Community market run by Notion Sydney. $10 entry. Details on stalls/program to be confirmed closer to the date.",
+    "link": "https://luma.com/Notion-Sydney",
+    "status": "upcoming",
+    "tags": ["Community", "Market", "Networking", "TBA"],
+    "byod": "no"
   }
 ]
