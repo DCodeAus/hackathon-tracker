@@ -298,5 +298,29 @@
     "status": "upcoming",
     "tags": ["Community", "Market", "Networking", "TBA"],
     "byod": "no"
+  },
+  {
+    "id": 26,
+    "title": "ElevenLabs x Blackbird Foundry Worldwide Hackathon – Sydney",
+    "date": "Thursday 11 December 6:00 PM - 10:30 PM AEDT",
+    "sortDate": "2026-12-11",
+    "location": "Sydney, NSW (venue on registration)",
+    "description": "AI Tinkerers Sydney's leg of the largest-ever global hackathon dedicated to Conversational Agents, run simultaneously across 30 cities. Team formation, kickoff talk, building, then finalist presentations. Over $200K USD in total prizes.",
+    "link": "https://sydney.aitinkerers.org/p/elevenlabs-global-hackathon-sydney",
+    "status": "upcoming",
+    "tags": ["AI", "Hackathon", "Voice"],
+    "byod": "required"
+  },
+  {
+    "id": 27,
+    "title": "ElevenLabs x Blackbird Foundry Worldwide Hackathon – Melbourne",
+    "date": "Wednesday 10 December 6:00 PM - 10:30 PM AEDT",
+    "sortDate": "2026-12-10",
+    "location": "Melbourne, VIC (venue on registration)",
+    "description": "AI Tinkerers Melbourne's leg of the largest-ever global hackathon dedicated to Conversational Agents, run simultaneously across 30 cities. Team formation, kickoff talk, building, then finalist presentations. Over $200K USD in total prizes.",
+    "link": "https://melbourne.aitinkerers.org/p/elevenlabs-x-blackbird-foundry-global-hackathon",
+    "status": "upcoming",
+    "tags": ["AI", "Hackathon", "Voice"],
+    "byod": "required"
   }
 ]
