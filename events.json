@@ -334,5 +334,29 @@
     "status": "upcoming",
     "tags": ["AI", "Conference", "Enterprise"],
     "byod": "no"
+  },
+  {
+    "id": 29,
+    "title": "RIMPA Global Hackathon 2026",
+    "date": "Monday 19 - Wednesday 21 October 2026",
+    "sortDate": "2026-10-19",
+    "location": "Royal Randwick Racecourse, Alison Rd, Randwick NSW 2031 (hybrid, in-person + virtual)",
+    "description": "Teams tackle bias, misinformation and disinformation in information management, especially as amplified by AI. Solutions can be a methodology, strategy, protocols, digital tool specs or algorithms. Minimum one team member must attend in person; teams of 2-5. Sponsored by the National Archives of Australia. Winners announced at the RIMPA Live Convention Diamond Ball.",
+    "link": "https://www.rimpa.com.au/events/ems-events-calendar/hackathon-2026.html",
+    "status": "upcoming",
+    "tags": ["AI", "Hackathon", "Information Management"],
+    "byod": "required"
+  },
+  {
+    "id": 30,
+    "title": "WomenHack – Melbourne",
+    "date": "Wednesday 18 November 6:00 PM - 9:00 PM",
+    "sortDate": "2026-11-18",
+    "location": "Melbourne, VIC (venue on registration)",
+    "description": "Tech hiring and networking event connecting women in tech with employers hiring in Melbourne. Despite the name, it's a career fair / networking evening rather than a build hackathon.",
+    "link": "https://www.eventbrite.com/e/womenhack-melbourne-employer-ticket-november-18-2026-tickets-1980044879536",
+    "status": "upcoming",
+    "tags": ["Networking", "Community", "Women in Tech"],
+    "byod": "no"
   }
 ]
