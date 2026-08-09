@@ -322,5 +322,17 @@
     "status": "upcoming",
     "tags": ["AI", "Hackathon", "Voice"],
     "byod": "required"
+  },
+  {
+    "id": 28,
+    "title": "Data Center World Australia & The AI Summit",
+    "date": "Monday 7 - Wednesday 9 September 2026",
+    "sortDate": "2026-09-07",
+    "location": "Melbourne Convention & Exhibition Centre, Melbourne VIC",
+    "description": "Co-located enterprise conferences: Data Center World Australia covers infrastructure for scaling AI (power, cooling, sustainability, edge computing), while The AI Summit focuses on applying commercial AI to real business outcomes. 1,000+ attendees, 65+ sponsors/exhibitors, 50+ speakers.",
+    "link": "https://datacenterworldaustralia.com/",
+    "status": "upcoming",
+    "tags": ["AI", "Conference", "Enterprise"],
+    "byod": "no"
   }
 ]
