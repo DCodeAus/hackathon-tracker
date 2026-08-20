@@ -358,5 +358,17 @@
     "status": "upcoming",
     "tags": ["Networking", "Community", "Women in Tech"],
     "byod": "no"
+  },
+  {
+    "id": 31,
+    "title": "Mobile AI Hackathon",
+    "date": "Friday 28 - Sunday 30 August 2026",
+    "sortDate": "2026-08-28",
+    "location": "MLAI @ Stone & Chalk, Melbourne CBD, Melbourne VIC",
+    "description": "A 30-hour intensive build sprint where developers, designers, and founders create AI-native applications for Apple platforms, with intelligence running directly on iPhone, iPad, Mac, Apple Watch and Vision Pro. Teams build prototypes, attend workshops, get mentoring, and present to industry judges. Application-based ($50 ticket, only approved applicants charged). Six prize categories with Apple hardware awards: Grand Prize, Enterprise, visionOS, Social-Impact, Beginner, People's Choice.",
+    "link": "https://hackathonsaustralia.com.au/events/mobile-ai-hackathon",
+    "status": "upcoming",
+    "tags": ["AI", "Hackathon", "Apple", "Mobile"],
+    "byod": "required"
   }
 ]
