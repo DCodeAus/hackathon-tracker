@@ -34,7 +34,9 @@ hackathon-tracker/
 ├── events.json             # Event data
 ├── hackathon-events.html   # Old address - redirects to index.html
 ├── SOURCES.md              # Sites to check for new events
-├── .github/workflows/      # Publishes the site to GitHub Pages on every push
+├── check_events.py         # Checks events.json (see "Checking the data" below)
+├── favicon.svg / .png      # Site icon (plus apple-touch-icon.png for phones)
+├── .github/workflows/      # Publishes the site, and checks the data weekly
 └── README.md               # This file
 ```
 
@@ -58,6 +60,10 @@ Each event includes:
 - `status` - "upcoming" or "past". The page works this out from `endDate`/`sortDate` each time it loads, so events move to "Past" on their own; the stored value is only a fallback
 - `byod` - "required", "optional" or "no" (bring your own laptop)
 - `tags` - Array of categories
+
+## Checking the data
+
+`check_events.py` checks `events.json` every time it's pushed, and every Monday morning. It fails on anything that would break the page (invalid JSON, a missing title or date, a repeated id) and warns about an upcoming event with its date still TBA or no link. It also warns when there are fewer than five upcoming events - and on the Monday run that fails the check, so GitHub emails you that it's time to look through `SOURCES.md` for more. Run it yourself with `python3 check_events.py`.
 
 ## Customisation
 

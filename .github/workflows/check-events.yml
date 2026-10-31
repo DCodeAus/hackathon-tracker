@@ -1,0 +1,32 @@
+# Checks events.json with check_events.py whenever it changes, and every
+# Monday morning (Sydney time) so a list that's running low on upcoming
+# events gets noticed - the weekly run fails, and GitHub emails you, when
+# there are fewer than five.
+name: Check events
+
+on:
+  push:
+    paths:
+      - "events.json"
+      - "check_events.py"
+      - ".github/workflows/check-events.yml"
+  pull_request:
+    paths:
+      - "events.json"
+  schedule:
+    - cron: "0 22 * * 0"   # 22:00 UTC Sunday = 8 or 9am Monday in Sydney
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Check events.json
+        run: python3 check_events.py
