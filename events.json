@@ -19,7 +19,7 @@
     "location": "Location revealed upon registration",
     "description": "4 important lessons for founders/startups. Teams of 5 compete in quick-fire challenges: pitch an absurd startup to mock VCs, acquire users on the street, go on a scavenger hunt, and network undercover.",
     "link": "https://luma.com/irlby-o3nj",
-    "status": "upcoming",
+    "status": "past",
     "tags": ["Startup", "Competition"],
     "byod": "no"
   },
@@ -45,7 +45,8 @@
     "link": "https://apply.genesisprogram.com.au/?utm_source=luma&referrer=luma#faq",
     "status": "past",
     "tags": ["Residency", "Founders", "Networking"],
-    "byod": "optional"
+    "byod": "optional",
+    "endDate": "2026-07-13"
   },
   {
     "id": 5,
@@ -55,7 +56,7 @@
     "location": "Abbotsford, Australia",
     "description": "Raw, unfiltered truth about scaling, raising, bootstrapping and building something big. Where hidden magic happens.",
     "link": "https://luma.com/ph7kdsfa",
-    "status": "upcoming",
+    "status": "past",
     "tags": ["Startup", "Networking", "Community"],
     "byod": "no"
   },
@@ -67,7 +68,7 @@
     "location": "Nindigully Pub, Queensland",
     "description": "A classic coding camp adventure with the DDD Brisbane crew in the outback. Fullstack conference with community-selected presentations.",
     "link": "https://dddoutback.com/",
-    "status": "upcoming",
+    "status": "past",
     "tags": ["Developer", "Conference", "Fullstack"],
     "byod": "optional"
   },
@@ -79,9 +80,10 @@
     "location": "Distributed across Australia",
     "description": "46-hour hackathon using open government data. Distributed format with in-person sites across Australia. Free event for builders and innovators.",
     "link": "https://govhack.org/",
-    "status": "upcoming",
+    "status": "past",
     "tags": ["Hackathon", "Government", "Data"],
-    "byod": "required"
+    "byod": "required",
+    "endDate": "2026-08-31"
   },
   {
     "id": 8,
@@ -93,7 +95,8 @@
     "link": "https://neurips.cc/Conferences/2026",
     "status": "upcoming",
     "tags": ["AI", "ML", "Conference"],
-    "byod": "optional"
+    "byod": "optional",
+    "endDate": "2026-12-12"
   },
   {
     "id": 9,
@@ -103,7 +106,7 @@
     "location": "Stone & Chalk Melbourne Startup Hub, Melbourne VIC 3000",
     "description": "Melbourne's AI buildDay returns. Bring an idea, a project you've been stuck on, or just turn up curious. OpenAI credits and problem briefs provided. Build for a few hours, then demo what you created.",
     "link": "https://luma.com/28e8n2r5",
-    "status": "upcoming",
+    "status": "past",
     "tags": ["AI", "Building"],
     "byod": "required"
   },
@@ -115,7 +118,7 @@
     "location": "Stone & Chalk Melbourne Startup Hub, Melbourne VIC 3000",
     "description": "MLAI session moving past the AI hype cycle into practical, hands-on application for Melbourne's AI community.",
     "link": "https://luma.com/mlai-nu4n",
-    "status": "upcoming",
+    "status": "past",
     "tags": ["AI", "Community", "Talk"],
     "byod": "optional"
   },
@@ -141,7 +144,8 @@
     "link": "https://luma.com/2qo9weog",
     "status": "upcoming",
     "tags": ["AI", "Health", "Hackathon"],
-    "byod": "required"
+    "byod": "required",
+    "endDate": "2026-12-05"
   },
   {
     "id": 13,
@@ -151,7 +155,7 @@
     "location": "Sydney, NSW (exact venue shared upon registration)",
     "description": "The third Codex community meetup in Sydney. Community experts and OpenAI team members share the latest Codex updates, live demos, and best practices from power users, plus community demo slots and networking.",
     "link": "https://luma.com/0otgrfug",
-    "status": "upcoming",
+    "status": "past",
     "tags": ["AI", "Codex", "Meetup"],
     "byod": "optional"
   },
@@ -163,7 +167,7 @@
     "location": "Perth, WA (venue TBA)",
     "description": "Evening Codex meetup with live demos of Codex features. Open to both experienced builders and those curious about coding agents. Limited spots. Details to be confirmed closer to the date.",
     "link": "https://luma.com/30pe1ame",
-    "status": "upcoming",
+    "status": "past",
     "tags": ["AI", "Codex", "Meetup", "TBA"],
     "byod": "optional"
   },
@@ -175,7 +179,7 @@
     "location": "MongoDB Sydney (venue TBA)",
     "description": "Claude Code community meetup hosted with MongoDB. Program and venue still to be announced by the organisers.",
     "link": "https://claudecommunity.com.au/cities/sydney",
-    "status": "upcoming",
+    "status": "past",
     "tags": ["AI", "Claude Code", "Meetup", "TBA"],
     "byod": "optional"
   },
@@ -187,7 +191,7 @@
     "location": "AWS Sydney (venue TBA)",
     "description": "Claude Code meetup for developers hosted at AWS Sydney. Full program to be confirmed.",
     "link": "https://claudecommunity.com.au/cities/sydney",
-    "status": "upcoming",
+    "status": "past",
     "tags": ["AI", "Claude Code", "Meetup", "TBA"],
     "byod": "optional"
   },
@@ -199,7 +203,7 @@
     "location": "MongoDB Sydney (venue TBA)",
     "description": "Claude Code community meetup hosted with MongoDB. Program and venue still to be announced by the organisers.",
     "link": "https://claudecommunity.com.au/cities/sydney",
-    "status": "upcoming",
+    "status": "past",
     "tags": ["AI", "Claude Code", "Meetup", "TBA"],
     "byod": "optional"
   },
@@ -211,7 +215,7 @@
     "location": "Sydney, NSW (venue TBA)",
     "description": "Claude Code community meetup in Sydney. Program and location still to be released.",
     "link": "https://claudecommunity.com.au/cities/sydney",
-    "status": "upcoming",
+    "status": "past",
     "tags": ["AI", "Claude Code", "Meetup", "TBA"],
     "byod": "optional"
   },
@@ -223,7 +227,7 @@
     "location": "AWS Sydney (venue TBA)",
     "description": "Claude Code meetup for developers hosted at AWS Sydney. Full program to be confirmed.",
     "link": "https://claudecommunity.com.au/cities/sydney",
-    "status": "upcoming",
+    "status": "past",
     "tags": ["AI", "Claude Code", "Meetup", "TBA"],
     "byod": "optional"
   },
@@ -235,7 +239,7 @@
     "location": "Private estate ~50 min from Melbourne (address revealed on acceptance)",
     "description": "Application-only garden party for tech and startup people, hosted by Build Club. Disconnect from AI, connect over food, drinks and music. Apply by sharing one secret worth knowing.",
     "link": "https://campus.buildclub.ai/events",
-    "status": "upcoming",
+    "status": "past",
     "tags": ["Networking", "Community", "TBA"],
     "byod": "no"
   },
@@ -247,7 +251,7 @@
     "location": "Sydney, Australia (venue TBA)",
     "description": "A day of hands-on building and coworking with the Stripe team. Get 1:1 technical integration support, connect with other founders, or just enjoy a change of scenery to build.",
     "link": "https://stripe.events/sydneybuildday",
-    "status": "upcoming",
+    "status": "past",
     "tags": ["Startup", "Building", "Stripe"],
     "byod": "required",
     "featured": true
@@ -272,7 +276,7 @@
     "location": "Melbourne Convention and Exhibition Centre (MCEC), Clarendon Room A, 1 Convention Centre Place, Melbourne VIC 3006",
     "description": "Intensive training day for business leaders to become advanced Claude users, working through real tasks from their own businesses with Anthropic Academy-certified experts. Covers setup, personalisation, business tool integration, and advanced capabilities.",
     "link": "https://www.eventbrite.com.au/e/claude-for-business-a-full-day-hands-on-intensive-melbourne-tickets-1993230198179",
-    "status": "upcoming",
+    "status": "past",
     "tags": ["AI", "Claude", "Business", "Training"],
     "byod": "required"
   },
@@ -284,7 +288,7 @@
     "location": "Online / remote (Codex community Discord)",
     "description": "Build an application using Codex (plus the OpenAI API where it adds value) that helps people — accessibility, education, nonprofits, or positive community impact. Submit a public GitHub repo, demo link/video, and short description in the Codex Discord thread. Prizes: 1st $500, 2nd $250, 3rd $150 (or equivalent OpenAI API/Codex credits).",
     "link": "",
-    "status": "upcoming",
+    "status": "past",
     "tags": ["AI", "Codex", "Hackathon", "Online"]
   },
   {
@@ -295,7 +299,7 @@
     "location": "Cha & Zak's Clubhouse (cat café), Unit 2/12 Rich St, Marrickville NSW 2204",
     "description": "Community market run by Notion Sydney, organised by Vanessa Intan and Kara's Home. $10 entry. Interest has grown to 250+ RSVPs. Exact start time and stall/vendor list still to be confirmed.",
     "link": "https://luma.com/Notion-Sydney",
-    "status": "upcoming",
+    "status": "past",
     "tags": ["Community", "Market", "Networking", "TBA"],
     "byod": "no"
   },
@@ -331,9 +335,10 @@
     "location": "Melbourne Convention & Exhibition Centre, Melbourne VIC",
     "description": "Co-located enterprise conferences: Data Center World Australia covers infrastructure for scaling AI (power, cooling, sustainability, edge computing), while The AI Summit focuses on applying commercial AI to real business outcomes. 1,000+ attendees, 65+ sponsors/exhibitors, 50+ speakers.",
     "link": "https://datacenterworldaustralia.com/",
-    "status": "upcoming",
+    "status": "past",
     "tags": ["AI", "Conference", "Enterprise"],
-    "byod": "no"
+    "byod": "no",
+    "endDate": "2026-09-09"
   },
   {
     "id": 29,
@@ -343,9 +348,10 @@
     "location": "Royal Randwick Racecourse, Alison Rd, Randwick NSW 2031 (hybrid, in-person + virtual)",
     "description": "Teams tackle bias, misinformation and disinformation in information management, especially as amplified by AI. Solutions can be a methodology, strategy, protocols, digital tool specs or algorithms. Minimum one team member must attend in person; teams of 2-5. Sponsored by the National Archives of Australia. Winners announced at the RIMPA Live Convention Diamond Ball.",
     "link": "https://www.rimpa.com.au/events/ems-events-calendar/hackathon-2026.html",
-    "status": "upcoming",
+    "status": "past",
     "tags": ["AI", "Hackathon", "Information Management"],
-    "byod": "required"
+    "byod": "required",
+    "endDate": "2026-10-21"
   },
   {
     "id": 30,
@@ -367,8 +373,103 @@
     "location": "MLAI @ Stone & Chalk, Melbourne CBD, Melbourne VIC",
     "description": "A 30-hour intensive build sprint where developers, designers, and founders create AI-native applications for Apple platforms, with intelligence running directly on iPhone, iPad, Mac, Apple Watch and Vision Pro. Teams build prototypes, attend workshops, get mentoring, and present to industry judges. Application-based ($50 ticket, only approved applicants charged). Six prize categories with Apple hardware awards: Grand Prize, Enterprise, visionOS, Social-Impact, Beginner, People's Choice.",
     "link": "https://hackathonsaustralia.com.au/events/mobile-ai-hackathon",
-    "status": "upcoming",
+    "status": "past",
     "tags": ["AI", "Hackathon", "Apple", "Mobile"],
+    "byod": "required",
+    "endDate": "2026-08-30"
+  },
+  {
+    "id": 32,
+    "title": "Microburbs Hackathon",
+    "date": "Saturday 7 November 2026, 9:00 AM - 5:00 PM AEDT",
+    "sortDate": "2026-11-07",
+    "location": "UTS Business School, Level 4, Ultimo NSW (or remote from anywhere in Australia)",
+    "description": "One-day build using Microburbs property and urban data for the City of Sydney: make an app, map or video. Free, in person or online, for coders, designers, analysts and founders, in teams of 3-6. Places are selected from applications. Lunch provided. Run by Sydney AI + Data.",
+    "link": "https://www.microburbs.com.au/hackathon",
+    "status": "upcoming",
+    "tags": ["AI", "Data", "Hackathon"],
+    "byod": "required"
+  },
+  {
+    "id": 33,
+    "title": "Level Her Up: We Can Build It! Game Jam 2026",
+    "date": "Saturday 7 - Sunday 8 November 2026, 8:30 AM - 5:00 PM AWST",
+    "sortDate": "2026-11-07",
+    "endDate": "2026-11-08",
+    "location": "Fortescue, 256 St Georges Terrace, Perth WA",
+    "description": "Beginner-friendly two-day game jam for women and non-binary people new to game development, with experienced mentors on hand.",
+    "link": "https://hackathonsaustralia.com.au/events/level-her-up-we-can-build-it-game-jam-2026",
+    "status": "upcoming",
+    "tags": ["Hackathon", "Games", "Women in Tech"]
+  },
+  {
+    "id": 34,
+    "title": "SDA Hackathon",
+    "date": "Tuesday 10 November 2026, 10:00 AM - 4:00 PM AEDT",
+    "sortDate": "2026-11-10",
+    "location": "Crown Sydney, 1 Barangaroo Ave, Barangaroo NSW",
+    "description": "One-day AI hackathon workshop on Specialist Disability Accommodation, working on problems faced by tenants, providers and government.",
+    "link": "https://hackathonsaustralia.com.au/events/sda-hackathon",
+    "status": "upcoming",
+    "tags": ["AI", "Hackathon", "Health"]
+  },
+  {
+    "id": 35,
+    "title": "FaithTech Brisbane 2026 Hackathon",
+    "date": "Friday 13 November 6:00 PM - Saturday 14 November 2026 7:00 PM AEST",
+    "sortDate": "2026-11-13",
+    "endDate": "2026-11-14",
+    "location": "Power to Change, 34 Trafalgar Street, Woolloongabba QLD",
+    "description": "Teams of builders, designers and students prototype solutions to real needs with ministry and community partners. $60, including Friday dinner and Saturday lunch. No hackathon experience needed. Online briefing Tuesday 10 November.",
+    "link": "https://hackathonsaustralia.com.au/events/faithtech-brisbane-2026-hackathon",
+    "status": "upcoming",
+    "tags": ["AI", "Hackathon", "Community"]
+  },
+  {
+    "id": 36,
+    "title": "Tanda AI Hackathon: What if…?",
+    "date": "Friday 20 November 5:30 PM - Saturday 21 November 2026 5:30 PM AEST",
+    "sortDate": "2026-11-20",
+    "endDate": "2026-11-21",
+    "location": "108 Wickham St, Fortitude Valley QLD",
+    "description": "Free hackathon hosted by Tanda on the theme \"What if…?\" - anything from games to practical fixes to pure experiments. Claude Code and Anthropic API access provided. Join a team to build and present, or come as a spectator for Saturday's demos (limited places).",
+    "link": "https://hackathonsaustralia.com.au/events/tanda-ai-hackathon-what-if",
+    "status": "upcoming",
+    "tags": ["AI", "Hackathon", "Claude Code"]
+  },
+  {
+    "id": 37,
+    "title": "MAUI Hack Day – Sydney",
+    "date": "Saturday 13 February 2027, 9:00 AM - 5:00 PM AEDT",
+    "sortDate": "2027-02-13",
+    "location": "SSW Sydney, Level 1, 81-91 Military Road, Sydney NSW 2089",
+    "description": "Free community hack day for mobile developers and anyone wanting to learn .NET MAUI, using AI and vibe-coding techniques. Beginners welcome - install .NET MAUI and Visual Studio, VS Code or Rider beforehand.",
+    "link": "https://hackathonsaustralia.com.au/events/maui-hack-day-sydney",
+    "status": "upcoming",
+    "tags": ["AI", "Hackathon", "Mobile", "Developer"],
+    "byod": "required"
+  },
+  {
+    "id": 38,
+    "title": "ANZDATA 50th Anniversary Datathon",
+    "date": "Wednesday 17 February 2027, 9:00 AM - 4:00 PM ACDT",
+    "sortDate": "2027-02-17",
+    "location": "SAHMRI, 870 North Terrace, Adelaide SA",
+    "description": "Datathon marking 50 years of the Australia and New Zealand Dialysis and Transplant Registry (ANZDATA). Cost and eligibility to be announced.",
+    "link": "https://hackathonsaustralia.com.au/events/anzdata-50th-anniversary-datathon",
+    "status": "upcoming",
+    "tags": ["Data", "Health", "TBA"]
+  },
+  {
+    "id": 39,
+    "title": "AI Hack Day – Melbourne",
+    "date": "Saturday 20 February 2027, 9:00 AM - 3:00 PM AEDT",
+    "sortDate": "2027-02-20",
+    "location": "SSW Melbourne, Level 1, 370 Little Bourke Street, Melbourne VIC",
+    "description": "Free community AI day for developers and learners of all levels: share ideas, learn, and optionally build something with Microsoft AI/ML tools (install them beforehand).",
+    "link": "https://hackathonsaustralia.com.au/events/ai-hack-day-melbourne",
+    "status": "upcoming",
+    "tags": ["AI", "Hackathon", "ML", "Developer"],
     "byod": "required"
   }
 ]

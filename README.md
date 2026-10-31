@@ -30,9 +30,12 @@ A simple, neon-themed event tracker for upcoming and past hackathon events in Au
 
 ```
 hackathon-tracker/
-├── index.html       # Main application
-├── events.json      # Event data
-└── README.md        # This file
+├── index.html              # Main application
+├── events.json             # Event data
+├── hackathon-events.html   # Old address - redirects to index.html
+├── SOURCES.md              # Sites to check for new events
+├── .github/workflows/      # Publishes the site to GitHub Pages on every push
+└── README.md               # This file
 ```
 
 ## How Events Work
@@ -50,7 +53,10 @@ Each event includes:
 - `location` - Where it happens
 - `description` - What it's about
 - `link` - URL to event page
-- `status` - "upcoming" or "past"
+- `sortDate` - the date as YYYY-MM-DD, used for ordering
+- `endDate` - (optional) last day of a multi-day event
+- `status` - "upcoming" or "past". The page works this out from `endDate`/`sortDate` each time it loads, so events move to "Past" on their own; the stored value is only a fallback
+- `byod` - "required", "optional" or "no" (bring your own laptop)
 - `tags` - Array of categories
 
 ## Customisation
