@@ -633,6 +633,16 @@
             return null;
         }
 
+        // Work out upcoming/past from the date so events roll over on their own.
+        // Uses endDate for multi-day events, then sortDate, then the stored status.
+        function eventStatus(event) {
+            const lastDay = event.endDate || event.sortDate;
+            if (!lastDay) return event.status;
+            const now = new Date();
+            const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+            return lastDay < today ? 'past' : 'upcoming';
+        }
+
         // Render all events (sorted chronologically)
         function renderEvents() {
             const upcomingContainer = document.getElementById('upcomingEvents');
@@ -641,8 +651,8 @@
             upcomingContainer.innerHTML = '';
             pastContainer.innerHTML = '';
 
-            const upcoming = events.filter(e => e.status === 'upcoming');
-            const past = events.filter(e => e.status === 'past');
+            const upcoming = events.filter(e => eventStatus(e) === 'upcoming');
+            const past = events.filter(e => eventStatus(e) === 'past');
 
             // Sort chronologically (earliest first for upcoming, latest first for past)
             upcoming.sort((a, b) => {
@@ -676,7 +686,7 @@
         // Create event card HTML
         function createEventCard(event) {
             const card = document.createElement('div');
-            card.className = `event-card ${event.status}${event.featured ? ' featured' : ''}`;
+            card.className = `event-card ${eventStatus(event)}${event.featured ? ' featured' : ''}`;
 
             const tagsHTML = event.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
             const byodLabel = event.byod === 'required' ? '💻 BYOD – bring a laptop'
