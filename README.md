@@ -42,9 +42,9 @@ hackathon-tracker/
 
 ## How Events Work
 
-Events are loaded from `events.json` on page load. Any changes made via the UI are saved to your browser's localStorage and override the original data.
+Events are loaded from `events.json` on page load. Events you add, edit or delete in the UI are saved in your browser's localStorage and applied on top of `events.json` each time the page loads, so they survive a refresh, and new events published to `events.json` still appear. These changes only exist in that browser.
 
-To permanently update events, export the data from the "View Data" button and update `events.json`.
+To make changes permanent for everyone, export the data from the "View Data" button and update `events.json`.
 
 ## Events Data
 

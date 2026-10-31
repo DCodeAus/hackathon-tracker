@@ -597,7 +597,7 @@
             try {
                 const response = await fetch('/hackathon-tracker/events.json');
                 if (!response.ok) throw new Error('Failed to load events.json');
-                events = await response.json();
+                events = applyLocalChanges(await response.json());
                 renderEvents();
             } catch (error) {
                 console.error('Error loading events:', error);
@@ -605,9 +605,53 @@
             }
         }
 
-        // Save to localStorage
-        function saveEvents() {
-            localStorage.setItem('hackathonEvents', JSON.stringify(events));
+        // ===== LOCAL CHANGES =====
+        // Only this browser's adds, edits and deletes are stored, and they're
+        // laid over events.json on every load. That way edits survive a
+        // refresh and new events published to events.json still show up.
+        const LOCAL_CHANGES_KEY = 'hackathonLocalChanges';
+
+        function readLocalChanges() {
+            try {
+                const saved = JSON.parse(localStorage.getItem(LOCAL_CHANGES_KEY));
+                if (saved && saved.upserts && Array.isArray(saved.deleted)) return saved;
+            } catch (e) { /* storage blocked or bad data: start fresh */ }
+            return { upserts: {}, deleted: [] };
+        }
+
+        function writeLocalChanges(changes) {
+            try {
+                localStorage.setItem(LOCAL_CHANGES_KEY, JSON.stringify(changes));
+                localStorage.removeItem('hackathonEvents'); // old key, never read back
+            } catch (e) { /* storage blocked: changes last until refresh */ }
+        }
+
+        function applyLocalChanges(baseEvents) {
+            const changes = readLocalChanges();
+            const merged = baseEvents.filter(e => !changes.deleted.includes(e.id));
+            Object.values(changes.upserts).forEach(local => {
+                if (changes.deleted.includes(local.id)) return;
+                const i = merged.findIndex(e => e.id === local.id);
+                if (i === -1) merged.push(local);
+                else merged[i] = local;
+            });
+            return merged;
+        }
+
+        // Record an added or edited event, then redraw
+        function saveEvent(event) {
+            const changes = readLocalChanges();
+            changes.upserts[event.id] = event;
+            writeLocalChanges(changes);
+            renderEvents();
+        }
+
+        // Record a deleted event, then redraw
+        function saveDeletion(id) {
+            const changes = readLocalChanges();
+            delete changes.upserts[id];
+            if (!changes.deleted.includes(id)) changes.deleted.push(id);
+            writeLocalChanges(changes);
             renderEvents();
         }
 
@@ -782,7 +826,7 @@
             if (range && range.end) newEvent.endDate = range.end;
 
             events.push(newEvent);
-            saveEvents();
+            saveEvent(newEvent);
             closeAddEventModal();
         }
 
@@ -790,7 +834,7 @@
         function deleteEvent(id) {
             if (confirm('Delete this event?')) {
                 events = events.filter(e => e.id !== id);
-                saveEvents();
+                saveDeletion(id);
             }
         }
 
@@ -861,7 +905,7 @@
                 if (range && range.end) events[eventIndex].endDate = range.end;
                 else delete events[eventIndex].endDate;
 
-                saveEvents();
+                saveEvent(events[eventIndex]);
                 closeEditEventModal();
             }
         }
